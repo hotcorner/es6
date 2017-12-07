@@ -40,9 +40,8 @@
     .filter(video => video.textContent.includes('Flexbox'))
     .map(video => video.dataset.time)
     .map(video => {
-    const timeSplit =  video.split(":");
-    const totalseconds = parseInt(timeSplit[0]) * 60 + parseInt(timeSplit[1]);    
-      return totalseconds
+      const timeSplit =  video.split(":");
+      return parseInt(timeSplit[0]) * 60 + parseInt(timeSplit[1]);
     })
     .reduce((total, second) => total + second, 0);
 
