@@ -31,9 +31,17 @@
 
 <script>
 
-  const letters = [...document.querySelector('.jump').innerText];
-  const jumpLetters = letters.map(letter => `<span>${letter}</span>`).join('');
-  document.querySelector('.jump').innerHTML = jumpLetters;
+  //const letters = [...document.querySelector('.jump').innerText];
+  //const jumpLetters = letters.map(letter => `<span>${letter}</span>`).join('');
+  //document.querySelector('.jump').innerHTML = jumpLetters;
+
+
+  const header = document.querySelector('.jump');
+  header.innerHTML = spanWrap(header.textContent);
+
+  function spanWrap(text) {
+    return [...text].map(letter => `<span>${letter}</span>`).join('');
+  }
 
 </script>
 </body>
