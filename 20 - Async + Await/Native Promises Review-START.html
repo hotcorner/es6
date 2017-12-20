@@ -9,6 +9,13 @@
 
 <body>
   <script>
+	fetch('https://api.github.com/users/wesbos').then(res=>{
+		return res.json();
+	}).then(res=>{
+		console.log(res)
+	}).catch(err=>{
+		console.log("ERROR", err)
+	});
 
   </script>
 </body>
